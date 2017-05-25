@@ -1,0 +1,266 @@
+<div class="pure-g">
+
+	<div class="pure-u-1-1">
+		<p>
+
+		</p>
+		<div class="appContent" role="main">
+			<div class="mainContainer">
+				<div class="Module Nags"> </div>
+				<div class="BoardPageWrapper Module">
+					<div class="DenzelReactBridge Module">
+						<div data-reactroot="">
+							<div>
+								<div class="boardPageContentWrapper">
+									<div class="ReactBoardHeader">
+
+										<div class="BrioProfileHeaderWrapper boardHeaderWrapper py2 desktopHeader">
+											<div class="_0 _12 _2 _3" style="max-width: 800px;">
+												<!-- react-empty: 1119 -->
+												<div class="mb3">
+													<h3 class="antialiased bold mb0 mt0 sans-serif display-md _2b break-word">{{boardInfo.name}}</h3></div>
+												<div class="belowBoardNameContainer">
+													<div class="_0 _i justify-end">
+														<div class="_0 _3">
+															<div class="_0"><span class="antialiased sans-serif text-sm _2b text-left bold">{{boardInfo.counts.pins}}</span><span class="antialiased sans-serif text-sm _2b text-left">
+																
+															Pins</span></div>
+															<div class="_0"><button style="border: none; background: none; padding: 0px;">
+																<span class="antialiased sans-serif text-sm _2b text-left bold">{{boardInfo.counts.followers}}</span>
+																<span class="antialiased sans-serif text-sm _2b text-left">
+																Follower</span></button></div>
+															<div class="mt1">
+																<div class="antialiased sans-serif text-md _2b text-left">{{boardInfo.description}}</div>
+															</div>
+														</div>
+														<div class="_0">
+															<div class="ReactBoardCollabBar flex justify-end">
+																<!--<div class="mr1"><button aria-label="Invite" class="boardAddCollaboratorsButton Button Module hasIcon rounded borderless" type="button"><em></em><span class="accessibilityText">Invite</span></button></div>-->
+																<div class="Module User hasText thumb small boardCollabUserRep">
+																	<a class="profileSource" data-element-type="64" href="{{users.creator.url}}">
+																		<div class="thumbImageWrapper">
+																			<div><img  ng-src="{{uesrs.image['60x60'].url}}"  title="More from"></div>
+																		</div>
+																		<!-- react-text: 78 -->
+																		<!-- /react-text -->
+																	</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="py1 mt2">
+												<div class="_0 _12 _2 _3" style="max-width: 800px;">
+													<div class="px2">
+														<div class="flex flex-wrap tabBar">
+
+															<a href="#/player/list" class="bg-white no-border">
+																<div class="tabItem px2 py2 ">
+																	<div class="antialiased sans-serif text-lg _29 text-left bold">
+																		<div class="tabText">Boards</div>
+																	</div>
+																</div>
+															</a>
+<!-- 
+															<a href="#/player/pins" class="bg-white no-border">
+																<div class="tabItem px2 py2 active">
+																	<div class="antialiased sans-serif text-lg _29 text-left bold">
+																		<div class="tabText">Pins</div>
+																	</div>
+																</div>
+															</a> -->
+															<!-- <a href="#/player/likes" class="bg-white no-border">
+																<div class="tabItem px2 py2">
+																	<div class="antialiased sans-serif text-lg _29 text-left bold">
+																		<div class="tabText">Likes</div>
+																	</div>
+																</div>
+															</a> -->
+
+														</div>
+													</div>
+
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="boardPinGrid relative py4">
+										<div class="BoardPinGrid">
+											<div class="_0">
+												<div class="_45  grid" ng-style="perentStyle " style="height: 1517px; width: 1276px;">
+											
+													<div class="_46  _47 grid-item " ng-repeat="pin in pins | filter:queryVal | orderBy:orderProp" ng-init="checkLasts($last)"  data-grid-item="true" >
+														<div>
+															<div class="relative">
+																<div class="bulkEditPinWrapper" role="button"><button aria-label="Select Pin" class="bulkEditCheckbox Button Module btn hasIcon rounded" type="button"><em></em><span class="accessibilityText">Select Pin</span></button></div>
+																<div style="padding-bottom: 24px;">
+																	<div>
+																		<div class="PinRep Module Pin hasAttribution summary none fullWidth">
+																			<div class="pinWrapper none">
+																				<div class="pinImageActionButtonWrapper">
+																					<div>
+																					
+																						<div class="rightSideButtonsWrapper didItWrapper visible">
+																							<!--<div style="margin-right: 4px;">
+																									<button aria-label="Tried it!" class="Button DropdownButton Module btn didIt isBrioFlat medium rounded square Button Module btn hasIcon rounded" ng-click="tanbEdit(pin.id , pin.board.id ,pin.board.name,pin.image.original.url,pin.url)" type="button"><em></em><span class="accessibilityText">Tried it!</span></button>
+																							</div>-->
+																							<div class="_0 _12 _2 _3" style="max-width: 800px;">
+																								<button aria-label="Edit" class="editPin isBrioFlat Button Module btn hasIcon rounded" ng-click="tanPEdit(pin.id , pin.board.id ,pin.board.name,pin.image.original.url,pin.url)" type="button"><em></em><span class="accessibilityText">Edit</span></button></div>
+																						</div>
+																						<a class="navigateLink" href="javascript:;" rel="nofollow">
+																							<div class="pinButtonWrapper pinNavLink navLinkOverlay dimGradient"><span class="buttonText"><strong><!--{{pin.}}--></strong></span></div>
+																						</a>
+																					</div>
+
+																					<div class="navigatePinLinkWrapper pinHolder">
+																						<a class="pinLink pinImageWrapper" href="javascript:;" rel="">
+																							<div class="fadeContainer">
+																								<div class="_0"style="width: 236px;" >
+																									<img  class="_32 block col-12" load-src="checkLast($last)" ng-src="{{pin.image.original.url}}">
+																									<input type="hidden" id="pagedata" value="{{cursor}}" />
+																									
+																								</div>
+																								<div class="pinImageDim"></div>
+																								<!-- react-empty: 605 -->
+																							</div>
+																						</a>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="appendedContainer"> </div>
+		</div>
+
+		<div class="ModalManager Module edithide hide">
+			<div class="Modal Module modalHasClose absoluteCenter show">
+				<div class="modalMask show"></div>
+				<div class="modalScroller">
+					<div class="modalContainer show"> <span class="positionModuleCaret"></span>
+						<div class="modalContent">
+							<div class="modalModule">
+								<div class="Module PinEdit inModal">
+									<div class="Module PinForm" data-component-type="MODAL_REPIN">
+										<form class="standardForm" method="post">
+											<h1 class="pinFormHeader">Edit this Pin</h1>
+											<div class="Module PinPreview"> <img  ng-src="{{imgurl}}" class="pinPreviewImg" data-load-state="pending"> </div>
+											<ul>
+												<li class="boardWrapper">
+													<h3><label>Board</label></h3>
+													<div> 
+														<button class="  BoardPickerDropdownButton Button DropdownButton Module btn rounded" ng-click="boardsname();boardShow = !boardShow "  type="button">        
+															<span class="downArrow"></span>  
+															<div class="BoardLabel Module compact">                
+																<span class="nameAndIcons"> 
+																	<div class="BoardIcons Module pinCreate">         
+																</div> 
+																	<span class="pinname name">{{pinname}}</span>
+																	<input type="hidden" name="hidden" class="pinid" value="" />
+																</span> 
+															</div>
+													</button> 
+													<div class="Module  Dropdown2"><!--visible-->
+															<div class="BoardPicker Module Picker compact inPopover">
+																<div class="selectionBody">
+																	<div class="Module SelectList compact" tabindex="0">
+																		<div class="sections">
+																			
+																			<ul class="section ">
+																				<ul class="sectionItems">
+																					<li class="item" ng-repeat="boardname in boardnames">
+																						<div class="BoardLabel Module compact"> 
+																							<span class="nameAndIcons"> 
+																								<span class="name">{{boardname.name}}</span>
+																								<input type="hidden" name="hidden" class="id" value="{{boardname.id}}" />
+																							</span>
+																						</div>
+																					</li>
+																				
+																				</ul>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</li>
+												<li>
+													<h3><label for="pinFormDescription">Description</label></h3>
+													<div>
+														<div class="Field Module TextField"> <textarea id="pinFormDescription"  name="description"   ng-model="trynotes"  class="content " placeholder="Tell us about this Pin..."></textarea> </div>
+													</div>
+												</li>
+											</ul>
+											<div class="formFooter">
+												<div class="formFooterDelete"> <button class="Button Module btn deleteButton hasText rounded" ng-click="delectPin(pinId)" type="button">       
+													<span class="buttonText">  Delete Pin </span>  </button> </div>
+												<div class="formFooterButtons"> <button class=" Button Module btn cancelButton hasText rounded" ng-click="closePin()" type="button">       
+													<span class="buttonText">  Cancel </span>  
+												</button> <button class="Button Module btn hasText primary rounded savePinButton"  type="submit"  ng-disabled="!trynotes"  ng-click="userpinEdit(pinId,boardId,trynotes,imglink )">        
+													<span class="buttonText">  Save </span>  
+												</button> </div>
+											</div> <input type="hidden" name="link" id="pinFormLink" value=""> 
+										</form>
+									</div>
+								</div>
+						</div> <button class="Button Module borderless cancelButton closeModal inModal  hasIcon " ng-click="closePin()" type="button"><em></em> <span class="accessibilityText">Close</span></button> </div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+<div class="ReactModalPortal pinshow hide">
+	<div data-reactroot="" class="ReactModal__Overlay ReactModal__Overlay--after-open">
+		<div class="ReactModal__Content ReactModal__Content--after-open Module ReactModal__Content inModal modalHasClose" tabindex="-1">
+			<div style="background: rgb(255, 255, 255); border-radius: 6px; box-sizing: border-box; height: 540px; width: 660px;">
+				<div style="align-items: center; border-right: 1px solid rgb(231, 231, 231); box-sizing: border-box; display: flex; float: left; flex-direction: column; height: 100%; justify-content: center; width: 50%; position: relative;">
+					<img alt="Pin preview" ng-src="{{imgurl}}" style="border-radius: 6px; max-height: 85%;max-width: 85%;"></div>
+				<div style="display: inline-block; width: 50%; height: 100%; position: relative;">
+					<div class="DidItRecommend Module inEdit">
+						<div class="recommendContainer">
+							<div>
+								<div class="mt4 mb3 ml3">
+									<h5 class="antialiased bold mb0 mt0 sans-serif display-xs _2c break-word">Tried it!</h5></div>
+								<div class="ml3 mr3 mb2">
+									<div class="antialiased sans-serif text-lg _2c text-left"><span><b>You</b> tried this idea</span></div>
+								</div>
+								<hr class="_3u border-top m0">
+							</div>
+							<div class="_0 _22 mt3">
+								<div class="_0 _22 _11 px2">
+									<div class="_0 _22 mb2">
+										<h5 class="antialiased bold mb0 mt0 sans-serif display-xs _2c break-word">How'd it go?</h5></div>
+									<div class="_0 _22 _11 mb2"><textarea aria-invalid="false" class="_56 _22 _293 _2c bold text-md border-box col-12 px1 py2 rounded _57 border" id="trynotes"   ng-model="trynotes"   placeholder="Leave a note or tip" rows="3"></textarea></div>
+									<div class="fix-image-uploader" style="position: relative; overflow: visible; direction: ltr;">
+									<!--	<button class="didItImageUpload image-upload-button hasIcon isBrioFlat Button Module btn hasIcon hasText rounded flex justify-center"><em></em><div class="px1 inline-block self-center">
+											<div class="antialiased sans-serif text-sm _2c text-left">Add a photo</div></div>
+										</button>
+										<input qq-button-id="2f19e19e-9f88-4e19-b259-522f9526f7fc" title="file input" type="file" name="img" style="position: absolute; right: 0px; top: 0px; font-family: Arial; font-size: 118px; margin: 0px; padding: 0px; cursor: pointer; opacity: 0; height: 100%;"></div>
+								-->
+								</div>
+								<div class="_0 _22 _7 bottom-0 mt1 mb3 absolute right-0">
+									<div class="_0 _22 mr1"><button class="_3g _22 text-md antialiased bold border-box no-border _3k _293 _2a  _266 _3j"  ng-click="delectPin(pinId)" type="button">Delete</button></div>
+									<div class="_0 _22 mr2"><button class="_3g _22 text-md antialiased bold border-box no-border _3k _293 _2a _266 _3j" ng-disabled="!trynotes"  ng-click="userpinEdit(pinId,boardId,trynotes,imglink )" type="button">Done</button></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><button class="Button Module borderless cancelButton closeModal inModal show" type="button" ng-click="closesPin()"><em></em><span class="visuallyHidden">Close modal</span></button></div>
+	</div>
+</div>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html ng-app="myApp">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>pinterest</title>
+		<link rel="stylesheet" type="text/css" href="../../static/css/pure-0.6.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../static/css/boards.css"/>
+		<link rel="stylesheet" type="text/css" href="../../static/css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../../static/css/app.css" />
+		
+	</head>
+	<body >
+
+<div class="constrained" ng-controller="MyCtrl">
+	<div class="show-grid" infinite-scroll='increaseLimit(' infinite-scroll-distance='2'>
+            
+		    <table >
+		        <tr ng-repeat="lead in Leads" ng-click="vm.showleaddetail(lead.Id, $event)">
+		            <td>Number</td>
+		            <td>{{lead.number}}</td>
+		        </tr>
+		    </table>
+	  		  </div>
+	    </div>
+</div>
+<script src="../../static/js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../static/js/masonry.pkgd.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="../../static/js/angular-1.5.8.js"></script>
+		<script type="text/javascript" src="../../static/js/angular-route.js"></script>
+		
+		<script src="../../static/js/ng-infinite-scroll.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	
+	
+	
+</script>
+</body >
+</html>

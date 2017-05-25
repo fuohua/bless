@@ -1,0 +1,260 @@
+<div class="pure-g" >
+	<div class="">
+		<p>
+			
+		</p>
+
+		<div class="BrioProfileHeaderWrapper desktopHeader  px3 mt1">
+			<div class="flex flex-wrap relative">
+				
+				<div class="_0 _12 _2 _3" style="max-width: 800px;">
+					<div>
+						<div class="_0 _y _a _1b pull-left" style="vertical-align: top;">
+							<div>
+								<div class="_0 _12 _a _1m pull-left" style="vertical-align: top;">
+									<div class="px2">
+										<h3 class="antialiased bold mb0 mt0 sans-serif display-md _2b break-word" ng-bind="uesrs.first_name">{{uesrs.first_name}}</h3></div>
+								</div>
+								<div class="_0 _12 _a _1i pull-left" style="vertical-align: top;">
+									<div class="px2">
+										<div class="flex py2 mxn1">
+											<div class="px1">
+												<a href="javascript:;" rel="">
+													<div class="antialiased sans-serif text-md _29 text-left bold"><span><span class="value block dark-gray"  ng-bind="uesrs.counts.followers">{{uesrs.counts.followers}}</span> <span class="label ">Follower</span></span>
+													</div>
+												</a>
+											</div>
+											<div class="px1">
+												<a href="javascript:;" rel="">
+													<div class="antialiased sans-serif text-md _29 text-left bold"><span><span class="value block dark-gray" ng-bind="uesrs.counts.following">{{uesrs.counts.following}}</span> <span class="label ">Following</span></span>
+													</div>
+												</a>
+											</div>
+										</div>
+										<div>
+											<div class="userLocationDescription">
+												<div class="antialiased sans-serif text-md _29 text-left bold"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="_0 _u _a _15 pull-left" style="vertical-align: top;">
+							<div class="_0 px2">
+								<div class="relative py2">
+									<div class="col-12">
+										<div class="_33 overflow-hidden relative _36 circle">
+											<div class="_0 relative" style="background-color: rgb(239, 239, 239); padding-bottom: 100%;"><img class="_32 block col-12 absolute" ng-src="{{uesrs.image['60x60'].url}}"></div>
+											<div class="_37 absolute top-0 left-0 right-0 bottom-0"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="py1 mt2">
+				<div class="_0 _12 _2 _3" style="max-width: 800px;">
+					<div class="px2">
+						<div class="flex flex-wrap tabBar">
+							
+						
+								<a href="#/player/list" class="bg-white no-border">
+								<div class="tabItem px2 py2 active"><div class="antialiased sans-serif text-lg _29 text-left bold">
+									<div class="tabText">Boards</div>
+								</div></div>
+								</a>
+								
+								<a href="#/player/pins" class="bg-white no-border">
+									<div class="tabItem px2 py2">
+									<div class="antialiased sans-serif text-lg _29 text-left bold"><div class="tabText">Pins</div></div></div>
+								</a>
+								<!--<a href="#/player/likes" class="bg-white no-border">
+									<div class="tabItem px2 py2">
+									<div class="antialiased sans-serif text-lg _29 text-left bold"><div class="tabText">Likes</div></div></div>
+								</a>-->
+								 
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			<div class="contentRow"><div class="antialiased sans-serif text-sm _29 text-left"><div class="countStat"><span><span class="value" ng-bind="uesrs.counts.boards">{{uesrs.counts.boards}}</span> <span class="label">Broads</span></span></div></div></div>
+							
+		</div>
+
+		<div class="pull-left">
+			<div class="publicBoardsWrapper">
+				<div class="ProfileGrid3col">
+					<div class="mb4">
+						<div class="GridItems centeredWithinWrapper flex flex-wrap">
+							<div class="cardWrapper py3" style="width: 301px;">
+								<div class="item">
+									<div class="ProfileBoardCard">
+										<button class="createCard bg-white p0 " ng-click="isShow=!isShow">
+										<div class="_24 overflow-hidden relative _26 rounded" style="width: 301px; height: 200px;">
+											<div class="createRep flex items-center justify-center bg-super-light-gray" style="height: 200px; width: 301px;">
+												<div class="_24 overflow-hidden relative _27 circle" style="width: 40px; height: 40px;">
+													<div class="bg-white">
+														<i></i>
+														<svg class="_2z red block" height="40" width="40" viewBox="0 0 16 16" aria-label="Create board" role="img">
+															<title>Create board</title>
+															<path d="M8.889 11.778c0 .489-.4.889-.89.889a.891.891 0 0 1-.888-.89V8.89H4.222c-.489 0-.889-.4-.889-.89 0-.488.4-.888.889-.888H7.11V4.222c0-.489.4-.89.89-.889.488 0 .889.4.889.89v2.889h2.888c.49 0 .89.4.89.888 0 .489-.4.89-.89.89H8.89v2.888zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0z"></path>
+														</svg>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="px1 py2">
+											<div class="antialiased sans-serif text-xl gray text-left bold">Create board</div>
+										</div>
+									</button>
+									</div>
+								</div>
+							</div>
+							<div class="cardWrapper py3" ng-repeat="player in players | filter:queryVal | orderBy:orderProp" style="width: 301px;">
+								<div draggable="true">
+									<div class="item">
+										<div class="ProfileBoardCard">
+											<a href="#/player/pins/{{player.id}}" ng-link="['#/player/pins/', {id: player.id}]">
+												<div>
+													<div class="overflow-hidden" style="height: 200px;">
+														<div class="_24 overflow-hidden relative _26 rounded" style="width: 301px; height: 200px;">
+															<div class="flex" style="margin: -1px;">
+																<!-- react-text: 37 -->
+																<!-- /react-text -->
+																<div style="width: 301px;">
+																	<div class="_38 relative" style="height: 252px; width: 301px;">
+																		<!-- react-empty: 40 -->
+																		<div class="_39 absolute _3a" data-grid-item="true" style="top: 0px; left: 0px; transform: translateX(0px) translateY(0px); width: 300px;">
+																			<div>
+																				<div >
+																					<div class="bg-super-light-gray overflow-hidden" >
+																						<div class="relative">
+																							<div class="imageWash absolute"></div><img ng-src="{{player.image['60x60'].url}}" src="https://s-media-cache-ak0.pinimg.com/170x/90/44/64/904464d8920e02debe89620f0dc496a2.jpg" style="width: 100%; left: 0px; max-width: 9.0072e+15px; position: relative; top: 0px; "></div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																		<!--<div class="_39 absolute _3a" data-grid-item="true" style="top: 0px; left: 0px; transform: translateX(0px) translateY(101px); width: 100.333px;">
+																			<div>
+																				<div style="height: 101px; margin: 1px;">
+																					<div class="bg-super-light-gray overflow-hidden" style="height: 99px;">
+
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="_39 absolute _3a" data-grid-item="true" style="top: 0px; left: 0px; transform: translateX(100.333px) translateY(0px); width: 100.333px;">
+																			<div>
+																				<div style="height: 101px; margin: 1px;">
+																					<div class="bg-super-light-gray overflow-hidden" style="height: 99px;">
+
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="_39 absolute _3a" data-grid-item="true" style="top: 0px; left: 0px; transform: translateX(100.333px) translateY(101px); width: 100.333px;">
+																			<div>
+																				<div style="height: 101px; margin: 1px;">
+																					<div class="bg-super-light-gray overflow-hidden" style="height: 99px;"></div>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="_39 absolute _3a" data-grid-item="true" style="top: 0px; left: 0px; transform: translateX(200.667px) translateY(0px); width: 100.333px;">
+																			<div>
+																				<div style="height: 150.5px; margin: 1px;">
+																					<div class="bg-super-light-gray overflow-hidden" style="height: 148.5px;">
+
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="_39 absolute _3a" data-grid-item="true" style="top: 0px; left: 0px; transform: translateX(200.667px) translateY(151px); width: 100.333px;">
+																			<div>
+																				<div style="height: 101px; margin: 1px;">
+																					<div class="bg-super-light-gray overflow-hidden" style="height: 99px;"></div>
+																				</div>
+																			</div>
+																		</div>-->
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													
+												</div>
+											</a>
+											<div class="relative">
+												<div class="flex items-center mt1 info">
+													<div class="px1 py1 flex-auto">
+														<div class="antialiased sans-serif text-xl dark-gray text-left bold truncate">{{player.name}}</div>
+														<div class="subtitle">
+															<div class="antialiased sans-serif text-xs gray text-left"><span><span class="value">{{player.counts.pins}}</span> <span class="label">Pins</span></span>
+															</div>
+														</div>
+													</div>
+													<div class="flex-none ml1">
+														<div class="editButton"><button ng-click="changeEdit()"  class="_3g _22 text-md antialiased bold border-box no-border _3h pointer _3l _29 _2c _3j" type="button">Edit</button></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 弹窗-->
+			<div class="ReactModalPortal" ng-show='isShow'>
+				<div data-reactroot="" class="ReactModal__Overlay ReactModal__Overlay--after-open">
+					<div class="ReactModal__Content ReactModal__Content--after-open BoardCreate BoardEditBase Module ReactModal__Content inModal modalHasClose" tabindex="-1">
+						<form class="standardForm" method="post">
+							<h1>Create board</h1>
+							<ul>
+								<li>
+									<h3><label class="" for="boardEditName">Name</label></h3>
+									<div><input type="text" class="boardEditName " id="boardEditName"  ng-model="boardName" name="boardName" placeholder="Like &quot;Places to Go&quot; or &quot;Recipes to Make.&quot;" value=""></div>
+								</li>
+							</ul>
+							<div class="formFooter">
+								<div class="formFooterButtons">
+									<button aria-label="Cancel" class="cancelButton Button Module btn hasText rounded" ng-click="isShow=!isShow" id="cancelButton" type="button"><span class="buttonText">Cancel</span>
+								</button>
+									<button aria-label="Create" class="saveBoardButton Button Module btn hasText rounded primary " ng-disabled="!boardName" ng-click="submitButton(boardName)" type="button"><span class="buttonText">Create</span></button></div>
+							</div>
+						</form><button ng-click="isShow=!isShow" class="Button Module borderless cancelButton closeModal inModal show" type="button"><em></em><span class="visuallyHidden">Close modal</span></button></div>
+				</div>
+			</div>
+			<div class="ReactModalPortal hide" id="editbroads">
+				<div data-reactroot="" class="ReactModal__Overlay ReactModal__Overlay--after-open">
+					<div class="ReactModal__Content ReactModal__Content--after-open BoardEdit BoardEditBase Module ReactModal__Content inModal modalHasClose" tabindex="-1">
+						<div>
+							<form class="standardForm" method="post">
+								<h1><span><strong>Edit your board</strong></span></h1>
+								<ul>
+									<li>
+										<h3><label class="" for="boardEditName">Name</label></h3>
+										<div><input type="text" class="boardEditName " id="boardEditName" name="boardName"  ng-model="boardEditName"  placeholder="Like &quot;Places to Go&quot; or &quot;Recipes to Make.&quot;" value="36612"></div>
+									</li>
+									<li class="descriptionWrapper">
+										<h3><label class="" for="boardEditDescription">Description</label></h3>
+										<div><textarea class="boardEditDescription" id="boardEditDescription" maxlength="100"  ng-model="boardEditDescription"  name="description" placeholder="What's your board about?">fewgsegf</textarea></div>
+									</li>
+									<div class="formFooter">
+										<div class="formFooterDelete"><button aria-label="Delete board" class="deleteBoardButton Button Module btn hasText rounded"  id="deleteBoardButton" ng-click="deletebroads(broadid)" type="button"><span class="buttonText">Delete board</span></button></div>
+										<div class="formFooterButtons"><button aria-label="Cancel" class="cancelButton Button Module btn hasText rounded" id="cancelButton" ng-click="hidebroads()" type="button"><span class="buttonText">Cancel</span></button>
+											<button aria-label="Save" class="saveBoardButton Button Module btn hasText rounded primary"  ng-disabled="!boardEditName"  ng-click="submitButtons(broadid, boardEditName,boardEditDescription)" type="button"><span class="buttonText">Save</span></button></div>
+									</div>
+							</form>
+						</div><button class="Button Module borderless cancelButton closeModal inModal show" ng-click="hidebroads()" type="button"><em></em><span class="visuallyHidden">Close modal</span></button></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
